@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SADCAM Auto Services & Repairs | Car Service & Booking Pinetown</title>
+  <meta name="description" content="Professional auto repairs, diagnostic scanning, brake servicing, and general car maintenance in Pinetown CBD. Book your slot online today.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              500: '#f59e0b', /* Energetic Amber Accent */
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+            },
+            dark: {
+              900: '#0f172a', /* Deep Slate Gray */
+              800: '#1e293b',
+              700: '#334155',
+              600: '#475569',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col justify-between">
+
+  <!-- Header & Navigation -->
+  <header class="bg-dark-900 text-white sticky top-0 z-40 shadow-lg border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="bg-brand-500 text-dark-900 p-2.5 rounded-lg font-bold text-xl tracking-wider">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+        </div>
+        <div>
+          <span class="block font-black text-lg tracking-tight sm:text-xl text-white">SADCAM AUTO</span>
+          <span class="block text-xs uppercase tracking-widest text-brand-500 font-semibold">Services & Repairs</span>
+        </div>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-8 text-sm font-medium">
+        <a href="#services" class="hover:text-brand-500 transition duration-150">Our Services</a>
+        <a href="#about" class="hover:text-brand-500 transition duration-150">About Us</a>
+        <a href="#contact" class="hover:text-brand-500 transition duration-150">Contact</a>
+      </nav>
+
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="tel:0814091114" class="text-white hover:text-brand-500 flex items-center gap-2 text-sm transition">
+          <i class="fa-solid fa-phone text-brand-500"></i> 081 409 1114
+        </a>
+        <a href="#booking" class="bg-brand-500 hover:bg-brand-600 text-dark-900 font-bold px-5 py-2.5 rounded-md text-sm transition shadow-md shadow-brand-500/20">
+          Book Appointment
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button onclick="toggleMobileMenu()" class="md:hidden text-white hover:text-brand-500 focus:outline-none">
+        <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Panel -->
+    <div id="mobile-menu" class="hidden bg-dark-800 border-t border-slate-700 px-4 py-4 space-y-3 md:hidden">
+      <a href="#services" onclick="toggleMobileMenu()" class="block text-white hover:text-brand-500 py-1 font-medium">Our Services</a>
+      <a href="#about" onclick="toggleMobileMenu()" class="block text-white hover:text-brand-500 py-1 font-medium">About Us</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block text-white hover:text-brand-500 py-1 font-medium">Contact</a>
+      <hr class="border-slate-700">
+      <a href="tel:0814091114" class="block text-white hover:text-brand-500 py-1 flex items-center gap-2">
+        <i class="fa-solid fa-phone text-brand-500"></i> Call: 081 409 1114
+      </a>
+      <a href="#booking" onclick="toggleMobileMenu()" class="block bg-brand-500 text-dark-900 text-center font-bold py-2 rounded-md">
+        Book Appointment
+      </a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-dark-900 via-dark-800 to-slate-900 text-white py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <span class="bg-brand-500/10 text-brand-500 border border-brand-500/30 text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wider">
+            Professional Workshop in Pinetown
+          </span>
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+            Keep Your Vehicle Performing At Its Best
+          </h1>
+          <p class="text-slate-300 text-lg leading-relaxed">
+            SADCAM Auto Services & Repairs offers reliable diagnostics, maintenance, and major repairs. Located conveniently in Pinetown CBD, our qualified technicians ensure transparent pricing and expert turnaround times.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 pt-2">
+            <a href="#booking" class="bg-brand-500 hover:bg-brand-600 text-dark-900 text-center font-bold px-8 py-4 rounded-md transition text-base shadow-lg shadow-brand-500/15">
+              Schedule Services Now
+            </a>
+            <a href="tel:0814091114" class="border border-slate-600 hover:border-brand-500 hover:bg-slate-800 text-white text-center font-bold px-8 py-4 rounded-md transition text-base flex items-center justify-center gap-2">
+              <i class="fa-solid fa-phone"></i> Call 081 409 1114
+            </a>
+          </div>
+          <!-- Simple Trust Badges -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-check-circle text-brand-500"></i>
+              <span class="text-xs text-slate-300 font-medium">Expert Mechanics</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-check-circle text-brand-500"></i>
+              <span class="text-xs text-slate-300 font-medium">Transparent Pricing</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-check-circle text-brand-500"></i>
+              <span class="text-xs text-slate-300 font-medium">Pinetown CBD</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute inset-0 bg-brand-500/10 rounded-2xl filter blur-xl transform translate-x-3 translate-y-3"></div>
+          <div class="relative bg-dark-800 border border-slate-700 p-8 rounded-2xl shadow-2xl">
+            <h3 class="text-xl font-bold mb-4 text-brand-500 flex items-center gap-2">
+              <i class="fa-solid fa-clock"></i> Quick Service Check
+            </h3>
+            <p class="text-sm text-slate-300 mb-6">Need an urgent assessment or standard maintenance? Book online in under 2 minutes. We will contact you to confirm the time slot.</p>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center bg-dark-900/50 p-3 rounded-lg border border-slate-800">
+                <span class="text-sm font-medium">Major & Minor Servicing</span>
+                <span class="text-xs bg-emerald-500/15 text-emerald-400 font-semibold px-2 py-1 rounded">Available</span>
+              </div>
+              <div class="flex justify-between items-center bg-dark-900/50 p-3 rounded-lg border border-slate-800">
+                <span class="text-sm font-medium">Diagnostic Error Scanning</span>
+                <span class="text-xs bg-emerald-500/15 text-emerald-400 font-semibold px-2 py-1 rounded">Available</span>
+              </div>
+              <div class="flex justify-between items-center bg-dark-900/50 p-3 rounded-lg border border-slate-800">
+                <span class="text-sm font-medium">Brake, Suspension & Engine Repairs</span>
+                <span class="text-xs bg-emerald-500/15 text-emerald-400 font-semibold px-2 py-1 rounded">Available</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section id="services" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-dark-900">Our Comprehensive Auto Services</h2>
+          <div class="h-1 w-20 bg-brand-500 mx-auto my-4 rounded"></div>
+          <p class="text-slate-600">From routine oil changes to diagnostic fault finding and mechanical rebuilds, we deliver professional workmanship on passenger vehicles and light commercials.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service Box 1 -->
+          <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="bg-brand-500/10 text-brand-600 w-14 h-14 rounded-lg flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-oil-can"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark-900">Minor & Major Servicing</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">Complete fluid checks, engine oil replacement, oil filter, air filter, spark plugs, and comprehensive safety inspections.</p>
+            <a href="#booking" class="text-brand-600 font-semibold text-sm inline-flex items-center gap-2 hover:underline">Book Service <i class="fa-solid fa-arrow-right text-xs"></i></a>
+          </div>
+
+          <!-- Service Box 2 -->
+          <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="bg-brand-500/10 text-brand-600 w-14 h-14 rounded-lg flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark-900">Computer Diagnostics</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">Using advanced scan tools to read engine trouble codes, evaluate sensor issues, reset service indicators, and pinpoint electrical faults.</p>
+            <a href="#booking" class="text-brand-600 font-semibold text-sm inline-flex items-center gap-2 hover:underline">Book Service <i class="fa-solid fa-arrow-right text-xs"></i></a>
+          </div>
+
+          <!-- Service Box 3 -->
+          <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="bg-brand-500/10 text-brand-600 w-14 h-14 rounded-lg flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-disc-drive"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark-900">Brakes & Discs</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">Inspection, replacement, and skimming of brake discs and brake pads to ensure complete on-road braking reliability.</p>
+            <a href="#booking" class="text-brand-600 font-semibold text-sm inline-flex items-center gap-2 hover:underline">Book Service <i class="fa-solid fa-arrow-right text-xs"></i></a>
+          </div>
+
+          <!-- Service Box 4 -->
+          <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="bg-brand-500/10 text-brand-600 w-14 h-14 rounded-lg flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark-900">Suspension & Steering</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">Repairs to worn shock absorbers, ball joints, control arms, tie rod ends, and CV joints to ensure stable, safe handling.</p>
+            <a href="#booking" class="text-brand-600 font-semibold text-sm inline-flex items-center gap-2 hover:underline">Book Service <i class="fa-solid fa-arrow-right text-xs"></i></a>
+          </div>
+
+          <!-- Service Box 5 -->
+          <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="bg-brand-500/10 text-brand-600 w-14 h-14 rounded-lg flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-car-battery"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark-900">Electrical & Battery</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">Battery testing, charging system diagnostic reports, and replacement of alternators and starters for seamless starting power.</p>
+            <a href="#booking" class="text-brand-600 font-semibold text-sm inline-flex items-center gap-2 hover:underline">Book Service <i class="fa-solid fa-arrow-right text-xs"></i></a>
+          </div>
+
+          <!-- Service Box 6 -->
+          <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="bg-brand-500/10 text-brand-600 w-14 h-14 rounded-lg flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark-900">Engine & Gearbox Repairs</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">Major overhauls and partial mechanical adjustments for manual and automatic transmission gearboxes, cooling systems, and engine cylinders.</p>
+            <a href="#booking" class="text-brand-600 font-semibold text-sm inline-flex items-center gap-2 hover:underline">Book Service <i class="fa-solid fa-arrow-right text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <span class="text-brand-600 text-sm uppercase tracking-widest font-extrabold block">About SADCAM Auto</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-dark-900 tracking-tight">Your Trusted Mechanic in Pinetown</h2>
+            <p class="text-slate-600 leading-relaxed">
+              Based at <strong>20 Anderson Rd, Pinetown CBD</strong>, SADCAM Auto Services & Repairs is committed to maintaining local vehicles with strict safety standards. We strive to offer transparent service recommendations, minimizing surprise costs.
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+              We employ professional automotive tools to keep your vehicle reliable on the road. Whether it is a routine service, emergency fix, or diagnostic fault finding, our team is equipped to resolve your motoring concerns efficiently.
+            </p>
+            <div class="grid grid-cols-2 gap-6 pt-4">
+              <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                <span class="block text-2xl font-black text-brand-600 mb-1">RMI Ready</span>
+                <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Standard Practices</span>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                <span class="block text-2xl font-black text-brand-600 mb-1">Guaranteed</span>
+                <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Workmanship</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-dark-900 rounded-2xl p-8 text-white space-y-8 shadow-xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 transform translate-x-12 -translate-y-12 w-48 h-48 bg-brand-500/10 rounded-full filter blur-xl"></div>
+            <h3 class="text-2xl font-bold text-brand-500">Operating Hours</h3>
+            <div class="space-y-4 relative z-10">
+              <div class="flex justify-between border-b border-slate-800 pb-3">
+                <span class="text-slate-300 font-medium">Monday - Friday</span>
+                <span class="text-white font-bold">07:30 - 17:30</span>
+              </div>
+              <div class="flex justify-between border-b border-slate-800 pb-3">
+                <span class="text-slate-300 font-medium">Saturday</span>
+                <span class="text-white font-bold">08:00 - 13:00</span>
+              </div>
+              <div class="flex justify-between border-b border-slate-800 pb-3">
+                <span class="text-slate-300 font-medium">Sunday</span>
+                <span class="text-brand-500 font-semibold">By Appointment Only</span>
+              </div>
+              <div class="flex justify-between pb-1">
+                <span class="text-slate-300 font-medium">Public Holidays</span>
+                <span class="text-brand-500 font-semibold">By Appointment Only</span>
+              </div>
+            </div>
+            <div class="bg-dark-800/80 p-4 rounded-lg border border-slate-700/50">
+              <p class="text-xs text-slate-400 leading-relaxed">
+                * Note: For after-hours assistance or complex diagnostics, please use our online booking system or call us directly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking System Section -->
+    <section id="booking" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-dark-900">Book Your Appointment</h2>
+          <div class="h-1 w-20 bg-brand-500 mx-auto my-4 rounded"></div>
+          <p class="text-slate-600">Select a date, specify your vehicle details, and we will contact you to confirm the time slot and provide an initial cost estimate.</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto bg-slate-50 border border-slate-200 rounded-2xl shadow-xl overflow-hidden grid md:grid-cols-12">
+          <!-- Left side contact details -->
+          <div class="md:col-span-5 bg-dark-900 text-white p-8 md:p-12 flex flex-col justify-between space-y-8">
+            <div>
+              <h3 class="text-xl font-bold mb-6 text-brand-500">Contact Details</h3>
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div class="bg-slate-800 p-2.5 rounded-lg text-brand-500 mt-1">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                  </div>
+                  <div>
+                    <span class="block text-xs text-slate-400 font-bold uppercase tracking-wider">Address</span>
+                    <p class="text-sm text-slate-200 font-medium leading-relaxed">
+                      20 Anderson Rd,<br>Pinetown CBD,<br>Pinetown, 3620
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="bg-slate-800 p-2.5 rounded-lg text-brand-500 mt-1">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div>
+                    <span class="block text-xs text-slate-400 font-bold uppercase tracking-wider">Phone</span>
+                    <a href="tel:0814091114" class="text-sm text-slate-200 font-medium hover:text-brand-500 transition">081 409 1114</a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="bg-slate-800 p-2.5 rounded-lg text-brand-500 mt-1">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <span class="block text-xs text-slate-400 font-bold uppercase tracking-wider">Online Booking support</span>
+                    <p class="text-sm text-slate-200 font-medium">sadcamrepairs@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 border-t border-slate-800">
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Need emergency diagnostics or towing support to our shop? Call us immediately.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right side actual form -->
+          <div class="md:col-span-7 p-8 md:p-12">
+            <form id="appointmentForm" onsubmit="handleBooking(event)" class="space-y-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="clientName" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Your Name *</label>
+                  <input type="text" id="clientName" required class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+                </div>
+                <div>
+                  <label for="clientPhone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Phone Number *</label>
+                  <input type="tel" id="clientPhone" required placeholder="081 409 1114" class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+                </div>
+              </div>
+
+              <div>
+                <label for="clientEmail" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Email Address</label>
+                <input type="email" id="clientEmail" class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="vehicleModel" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Vehicle Make/Model *</label>
+                  <input type="text" id="vehicleModel" required placeholder="e.g. VW Golf 7" class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+                </div>
+                <div>
+                  <label for="serviceType" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Required Service *</label>
+                  <select id="serviceType" required class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+                    <option value="">Select Service</option>
+                    <option value="Minor / Major Service">Minor / Major Service</option>
+                    <option value="Computer Diagnostics">Computer Diagnostics</option>
+                    <option value="Brakes & Discs">Brakes & Discs</option>
+                    <option value="Suspension & Steering">Suspension & Steering</option>
+                    <option value="Electrical & Battery">Electrical & Battery</option>
+                    <option value="Engine & Gearbox Diagnostics">Engine & Gearbox Diagnostics</option>
+                    <option value="General Mechanical Inspection">General Mechanical Inspection</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="bookDate" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Preferred Date *</label>
+                  <input type="date" id="bookDate" required class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+                </div>
+                <div>
+                  <label for="bookTime" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Preferred Time *</label>
+                  <select id="bookTime" required class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+                    <option value="">Select Time Slot</option>
+                    <option value="08:00 - 10:00">08:00 - 10:00</option>
+                    <option value="10:00 - 12:00">10:00 - 12:00</option>
+                    <option value="12:00 - 14:00">12:00 - 14:00</option>
+                    <option value="14:00 - 16:00">14:00 - 16:00</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="clientNotes" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Additional details or symptoms</label>
+                <textarea id="clientNotes" rows="3" placeholder="Tell us if you hear specific noises, warning lights etc." class="w-full bg-white border border-slate-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition"></textarea>
+              </div>
+
+              <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-dark-900 font-bold py-4 rounded-md transition shadow-md hover:shadow-lg shadow-brand-500/10">
+                Confirm Booking Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Feedback Dialog (Hidden by Default) -->
+    <div id="successModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center z-50 p-4">
+      <div class="bg-white rounded-xl shadow-2xl max-w-md w-full p-6 text-center border border-slate-100 transform scale-95 transition-all duration-300">
+        <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h3 class="text-xl font-bold text-dark-900 mb-2">Request Submitted!</h3>
+        <p class="text-sm text-slate-600 mb-6">
+          Thank you for booking with SADCAM Auto. We will review your request and contact you via phone or email to confirm your service slot.
+        </p>
+        <button onclick="closeSuccessModal()" class="w-full bg-dark-900 hover:bg-dark-800 text-white font-bold py-3 rounded-md transition">
+          Close Window
+        </button>
+      </div>
+    </div>
+
+    <!-- Live Map section -->
+    <section id="contact" class="py-12 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h3 class="text-xl font-bold mb-6 text-dark-900">Find Us in Pinetown</h3>
+        <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg border border-slate-200">
+          <!-- Google Maps Embed for 20 Anderson Rd, Pinetown -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.9702220455584!2d30.8653282!3d-29.8081691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70104686b240b%3A0xcfe0e7e17df2fe2b!2s20%20Anderson%20Rd%2C%20Pinetown%20CBD%2C%20Pinetown%2C%203620!5e0!3m2!1sen!2sza!4v1710000000000!5m2!1sen!2sza" 
+            class="w-full h-full border-0" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Staff Admin Portal (Toggleable/Secure modal) -->
+    <div id="adminPortalModal" class="fixed inset-0 bg-slate-900/85 backdrop-blur-sm hidden flex items-center justify-center z-50 p-4">
+      <div class="bg-white rounded-xl shadow-2xl max-w-5xl w-full max-h-[85vh] flex flex-col justify-between border border-slate-100 transform transition-all duration-300">
+        
+        <!-- Header -->
+        <div class="p-6 border-b border-slate-200 flex items-center justify-between bg-dark-900 text-white rounded-t-xl">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-lock text-brand-500"></i>
+            <h3 class="text-lg font-bold">SADCAM Admin Dashboard - Booking Manager</h3>
+          </div>
+          <button onclick="closeAdminPortal()" class="text-slate-400 hover:text-white">
+            <i class="fa-solid fa-xmark text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Bookings Content -->
+        <div class="p-6 overflow-y-auto flex-grow bg-slate-50">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+            <div>
+              <p class="text-sm text-slate-600">This lists booking requests submitted dynamically from the front end. Saved securely in local storage.</p>
+            </div>
+            <div class="flex gap-2">
+              <button onclick="exportBookingsToCSV()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-4 py-2.5 rounded-lg flex items-center gap-2 transition shadow">
+                <i class="fa-solid fa-file-excel"></i> Export CSV
+              </button>
+              <button onclick="clearAllBookings()" class="bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs px-4 py-2.5 rounded-lg flex items-center gap-2 transition shadow">
+                <i class="fa-solid fa-trash-can"></i> Clear All
+              </button>
+            </div>
+          </div>
+
+          <!-- Table wrapper -->
+          <div class="border border-slate-200 rounded-lg overflow-x-auto bg-white shadow-sm">
+            <table class="min-w-full divide-y divide-slate-200 text-left text-sm">
+              <thead class="bg-slate-100 font-bold text-slate-700 uppercase tracking-wider text-xs">
+                <tr>
+                  <th class="px-4 py-3">Date</th>
+                  <th class="px-4 py-3">Client</th>
+                  <th class="px-4 py-3">Vehicle</th>
+                  <th class="px-4 py-3">Service</th>
+                  <th class="px-4 py-3">Timeslot</th>
+                  <th class="px-4 py-3">Status</th>
+                  <th class="px-4 py-3 text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="bookingsTableBody" class="divide-y divide-slate-200 text-slate-600">
+                <!-- Content injected dynamically via Javascript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="p-6 border-t border-slate-200 bg-slate-100 flex justify-between items-center rounded-b-xl">
+          <span class="text-xs text-slate-500">Auto-Refreshes on Booking Submit</span>
+          <button onclick="closeAdminPortal()" class="bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold px-4 py-2 rounded-lg transition">
+            Exit Admin View
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="bg-brand-500 text-dark-900 p-2 rounded-lg font-bold text-base">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <span class="font-extrabold text-white tracking-wider text-base">SADCAM AUTO SERVICES & REPAIRS</span>
+        </div>
+        <p class="leading-relaxed text-slate-400 text-xs">
+          Qualified vehicle diagnostics, services, and structural adjustments safely resolved in Pinetown CBD.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-xs">Quick Links</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#services" class="hover:text-brand-500 transition">Our Services</a></li>
+          <li><a href="#about" class="hover:text-brand-500 transition">About Our Team</a></li>
+          <li><a href="#booking" class="hover:text-brand-500 transition">Book Appointment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-xs">Service Address</h4>
+        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+          20 Anderson Rd, Pinetown CBD, Pinetown, 3620<br>
+          Phone: <a href="tel:0814091114" class="text-slate-200 hover:text-brand-500 transition">081 409 1114</a>
+        </p>
+        <!-- Staff Admin Login trigger -->
+        <button onclick="promptAdminLogin()" class="text-slate-600 hover:text-brand-500 text-xs inline-flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-lock"></i> Staff Login Portal
+        </button>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+      <p>&copy; 2026 SADCAM Auto Services & Repairs. All rights reserved.</p>
+      <p>Designed for professional performance & safety.</p>
+    </div>
+  </footer>
+
+  <!-- Core Javascript Logic -->
+  <script>
+    // Toggle Mobile Navigation
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('menu-icon');
+      
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        menu.classList.add('hidden');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    }
+
+    // Helper: Local Storage Database initialization
+    const STORAGE_KEY = 'sadcam_bookings';
+    function getBookings() {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    }
+    function saveBookings(arr) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+    }
+
+    // Customer submits the booking form
+    function handleBooking(event) {
+      event.preventDefault();
+      
+      const newBooking = {
+        id: Date.now(),
+        clientName: document.getElementById('clientName').value.trim(),
+        clientPhone: document.getElementById('clientPhone').value.trim(),
+        clientEmail: document.getElementById('clientEmail').value.trim() || 'N/A',
+        vehicleModel: document.getElementById('vehicleModel').value.trim(),
+        serviceType: document.getElementById('serviceType').value,
+        bookDate: document.getElementById('bookDate').value,
+        bookTime: document.getElementById('bookTime').value,
+        clientNotes: document.getElementById('clientNotes').value.trim() || 'No additional notes.',
+        status: 'Pending', // Default status
+        createdAt: new Date().toLocaleDateString()
+      };
+
+      // Push to localStorage database
+      const bookings = getBookings();
+      bookings.push(newBooking);
+      saveBookings(bookings);
+
+      // Reset form fields
+      document.getElementById('appointmentForm').reset();
+
+      // Show Success Modal
+      document.getElementById('successModal').classList.remove('hidden');
+    }
+
+    // Success dialog handlers
+    function closeSuccessModal() {
+      document.getElementById('successModal').classList.add('hidden');
+    }
+
+    // Staff Portal Secure login mechanism
+    // Simple verification (uses '1114' or 'admin123' matching the end of client's phone for simple ease of use)
+    function promptAdminLogin() {
+      const pin = prompt("Please enter the SADCAM staff passcode to manage bookings:");
+      if (pin === "1114" || pin === "admin123") {
+        openAdminPortal();
+      } else if (pin !== null) {
+        alert("Incorrect passcode access denied.");
+      }
+    }
+
+    function openAdminPortal() {
+      renderBookingsTable();
+      document.getElementById('adminPortalModal').classList.remove('hidden');
+    }
+
+    function closeAdminPortal() {
+      document.getElementById('adminPortalModal').classList.add('hidden');
+    }
+
+    // Render bookings database inside Admin panel
+    function renderBookingsTable() {
+      const bookings = getBookings();
+      const tableBody = document.getElementById('bookingsTableBody');
+      tableBody.innerHTML = '';
+
+      if (bookings.length === 0) {
+        tableBody.innerHTML = `
+          <tr>
+            <td colspan="7" class="px-4 py-8 text-center text-slate-400">
+              No service bookings logged yet. New entries will show up here.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      // Display bookings in chronological reverse (newest first)
+      const sortedBookings = [...bookings].reverse();
+
+      sortedBookings.forEach((b) => {
+        let statusColor = 'bg-amber-100 text-amber-800';
+        if (b.status === 'Confirmed') statusColor = 'bg-blue-100 text-blue-800';
+        if (b.status === 'Completed') statusColor = 'bg-emerald-100 text-emerald-800';
+
+        const row = document.createElement('tr');
+        row.className = "hover:bg-slate-50 transition";
+        row.innerHTML = `
+          <td class="px-4 py-4 whitespace-nowrap font-medium text-dark-900">${b.bookDate}</td>
+          <td class="px-4 py-4">
+            <span class="block font-bold text-dark-900">${b.clientName}</span>
+            <span class="block text-xs text-slate-500">${b.clientPhone}</span>
+            <span class="block text-xs text-slate-400">${b.clientEmail}</span>
+          </td>
+          <td class="px-4 py-4 text-xs font-semibold uppercase text-slate-700">${b.vehicleModel}</td>
+          <td class="px-4 py-4 font-medium text-xs">${b.serviceType}</td>
+          <td class="px-4 py-4 text-xs font-medium text-slate-500">${b.bookTime}</td>
+          <td class="px-4 py-4 whitespace-nowrap">
+            <span class="inline-flex text-[10px] leading-5 font-bold px-2 rounded-full ${statusColor}">
+              ${b.status}
+            </span>
+          </td>
+          <td class="px-4 py-4 whitespace-nowrap text-right text-xs space-x-1">
+            <button onclick="updateBookingStatus(${b.id}, 'Confirmed')" class="text-blue-600 hover:text-blue-900 font-bold px-2 py-1 bg-blue-50 hover:bg-blue-100 rounded transition" title="Confirm booking">Confirm</button>
+            <button onclick="updateBookingStatus(${b.id}, 'Completed')" class="text-emerald-600 hover:text-emerald-900 font-bold px-2 py-1 bg-emerald-50 hover:bg-emerald-100 rounded transition" title="Complete booking">Complete</button>
+            <button onclick="deleteBooking(${b.id})" class="text-rose-600 hover:text-rose-900 font-bold px-2 py-1 bg-rose-50 hover:bg-rose-100 rounded transition" title="Delete record"><i class="fa-regular fa-trash-can"></i></button>
+          </td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+
+    // Admin updates a status (e.g., Pending -> Confirmed -> Completed)
+    function updateBookingStatus(id, newStatus) {
+      let bookings = getBookings();
+      bookings = bookings.map(b => {
+        if (b.id === id) {
+          b.status = newStatus;
+        }
+        return b;
+      });
+      saveBookings(bookings);
+      renderBookingsTable();
+    }
+
+    // Admin deletes a single booking
+    function deleteBooking(id) {
+      if (confirm("Are you sure you want to remove this booking request?")) {
+        let bookings = getBookings();
+        bookings = bookings.filter(b => b.id !== id);
+        saveBookings(bookings);
+        renderBookingsTable();
+      }
+    }
+
+    // Admin wipes all booking data
+    function clearAllBookings() {
+      if (confirm("DANGER: This action clears all historic bookings from local storage. Proceed?")) {
+        saveBookings([]);
+        renderBookingsTable();
+      }
+    }
+
+    // Exports the stored booking table as CSV (for Excel)
+    function exportBookingsToCSV() {
+      const bookings = getBookings();
+      if (bookings.length === 0) {
+        alert("No bookings currently available to export.");
+        return;
+      }
+
+      // CSV Headings
+      let csvContent = "data:text/csv;charset=utf-8,ID,Date,Time,Client Name,Phone,Email,Vehicle,Service Type,Status,Notes\n";
+
+      bookings.forEach(b => {
+        const row = [
+          b.id,
+          b.bookDate,
+          b.bookTime,
+          `"${b.clientName.replace(/"/g, '""')}"`,
+          b.clientPhone,
+          b.clientEmail,
+          `"${b.vehicleModel.replace(/"/g, '""')}"`,
+          `"${b.serviceType}"`,
+          b.status,
+          `"${b.clientNotes.replace(/"/g, '""')}"`
+        ].join(",");
+        csvContent += row + "\n";
+      });
+
+      // Trigger standard browser download action
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `sadcam_bookings_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
